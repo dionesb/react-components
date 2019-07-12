@@ -3,6 +3,9 @@
  * Este arquivo é o arquivo de entrada da aplicação. Tudo inicializará a partir
  * deste arquivo.
  */
-const soma = (a, b) => a - b;
+import React from 'react';
+import { render } from 'react-dom';
 
-alert(soma(1, 3));
+import App from './App';
+
+render(<App />, document.getElementById('app'));
