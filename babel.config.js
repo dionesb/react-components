@@ -2,9 +2,10 @@ module.exports = {
   presets: [
     /* Converte as funcionalidades do Javascript que o navegador 
     ainda não interpreta. Ex.: Import/Exports, Arow Functions, Classes etc. */
-    "@babel/preset-env",
+    '@babel/preset-env',
     /* Converte a funcionalidades do React que o navegador ainda não 
     interpreta. Ex.: JSX */
-    "@babel/preset-react",
-  ]
-} 
+    '@babel/preset-react'
+  ],
+  plugins: ['@babel/plugin-proposal-class-properties']
+};

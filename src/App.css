@@ -10,3 +10,32 @@ body {
   font: 14px Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased !important;
 }
+
+header#main-header {
+  background-color: #3b5999;
+  color: #ffffff;
+  padding: 15px;
+}
+
+header#main-header .header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header#main-header a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  float: left;
+  margin-top: 10px;
+}
+
+header#main-header .icon-perfil {
+  float: left;
+  background-image: url(./assets/user.png);
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  margin-left: 10px;
+}
