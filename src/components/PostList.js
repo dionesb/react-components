@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Post from './Post';
 
 class PostList extends Component {
   /* Estado do component */
@@ -7,8 +8,8 @@ class PostList extends Component {
       {
         id: 1,
         author: {
-          name: 'Diones Breda',
-          avatar: './assets/profile.jpg'
+          name: 'Jurandir Silva',
+          avatar: 'https://i.pravatar.cc/150?img=11'
         },
         date: '04 Jun 2019',
         content:
@@ -18,7 +19,7 @@ class PostList extends Component {
             id: 1,
             author: {
               name: 'Amanda Jurema',
-              avatar: './assets/avatar-user-1.jpeg'
+              avatar: 'https://i.pravatar.cc/150?img=5'
             },
             content:
               'Aliquam semper suscipit nibh, ut venenatis ex semper a. Ut porttitor fringilla tempor. Aenean fringilla, metus et maximus posuere, lorem erat facilisis lorem, quis consequat augue ligula quis metus. Suspendisse hendrerit felis at libero tempus mollis.'
@@ -27,7 +28,7 @@ class PostList extends Component {
             id: 2,
             author: {
               name: 'Zico Roberto',
-              avatar: './assets/avatar-user-3.jpeg'
+              avatar: 'https://i.pravatar.cc/150?img=8'
             },
             content:
               'Aliquam semper suscipit nibh, ut venenatis ex semper a. Ut porttitor fringilla tempor. Aenean fringilla, metus et maximus posuere, lorem erat facilisis lorem, quis consequat augue ligula quis metus. Suspendisse hendrerit felis at libero tempus mollis.'
@@ -38,7 +39,7 @@ class PostList extends Component {
         id: 2,
         author: {
           name: 'Juca Bala',
-          avatar: './assets/profile.jpg'
+          avatar: 'https://i.pravatar.cc/150?img=11'
         },
         date: '22 Jul 2019',
         content:
@@ -48,7 +49,7 @@ class PostList extends Component {
             id: 1,
             author: {
               name: 'Adalberto Pimenta',
-              avatar: './assets/avatar-user-5.jpeg'
+              avatar: 'https://i.pravatar.cc/150?img=51'
             },
             content:
               'Aliquam semper suscipit nibh, ut venenatis ex semper a. Ut porttitor fringilla tempor. Aenean fringilla, metus et maximus posuere, lorem erat facilisis lorem, quis consequat augue ligula quis metus. Suspendisse hendrerit felis at libero tempus mollis.'
@@ -59,7 +60,18 @@ class PostList extends Component {
   };
 
   render() {
-    return 1;
+    return (
+      <section id="post-list" className="container">
+        {this.state.posts.map(post => (
+          <Post
+            author={post.author}
+            date={post.date}
+            content={post.content}
+            comments={post.comments}
+          />
+        ))}
+      </section>
+    );
   }
 }
 
